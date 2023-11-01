@@ -1,31 +1,10 @@
-import {Component, inject} from '@angular/core';
-import {HousingLocation} from "../housing-location";
-import {HousesService} from "../houses.service";
+import { Injectable } from '@angular/core';
+import {HousingLocation} from "./housing-location";
 
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-
-
-
-
-
-export class HomeComponent {
-  // housingLocationList: HousingLocation[] = [];
-  // housingService: HousesService = inject(HousesService);
-
-  housingLocation: HousingLocation = {
-    id: 9999,
-    name: 'House',
-    city: 'City',
-    state: 'State',
-    photo: `https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg`,
-    availableExemplars: 99,
-    hasWifi: true,
-    hasLaundry: false,
-  };
+export class HousesService {
 
   housingLocationList: HousingLocation [] = [
     {
@@ -36,7 +15,7 @@ export class HomeComponent {
       photo: `https://img.ecmaps.de/remote/.jpg?url=https%3A%2F%2Fdam.destination.one%2F173310%2Fa164ccdb16477a3e603eec59c03627fdceb8528eb2c37005bde78f5d8fe4f23d%2Fkoelner-dom-koelntourismus-gmbh-axel-schulten.jpg&scale=both&mode=crop&quality=90&width=1356&height=1920`,
       availableExemplars: 1,
       hasWifi: true,
-     hasLaundry: false
+      hasLaundry: false
     },
     {
       id: 1,
@@ -60,7 +39,13 @@ export class HomeComponent {
     },
   ];
 
-  constructor() {
+  getAllHousingLocations(): HousingLocation[] {
+    return  this.housingLocationList;
   }
 
+  getHousingLocationViaID(id: number): HousingLocation | undefined {
+    return this.housingLocationList.find(location => location.id === id);
+  }
+
+  constructor() { }
 }

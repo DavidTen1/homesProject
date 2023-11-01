@@ -1,1 +1,7 @@
-<p>housing-location works!</p>
+<section class="listing">
+  <img class="listing-photo" [src]="housingLocation.photo" alt="Photo of {{housingLocation.name}}">
+  <h2>Home: {{housingLocation.name}}</h2>
+ <p class="listing-location">City: {{housingLocation.city}}</p>
+  <p class="listing-location">Wifi: {{housingLocation.hasWifi ? 'Available': 'Not available' }}</p>
+  <p class="listing-location">Laundry: {{housingLocation.hasLaundry ? 'Available': 'Not available' }}</p>
+</section>

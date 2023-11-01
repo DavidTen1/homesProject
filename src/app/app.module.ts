@@ -11,7 +11,7 @@ import { HousingLocationComponent } from './housing-location/housing-location.co
     HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HousingLocationComponent
   ],
   // which services to use
   providers: [],

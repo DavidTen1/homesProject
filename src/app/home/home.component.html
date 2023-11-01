@@ -3,6 +3,6 @@
     <input type="text" placeholder="Enter city name">
     <button type="button" class="button">Search</button>
   </form>
-
-
 </section>
+<!--<app-housing-location [housingLocation]="housingLocation" ></app-housing-location>-->
+<app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation" ></app-housing-location>

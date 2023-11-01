@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {HomeComponent} from "./home/home.component";
+import {HousingLocationComponent} from "./housing-location/housing-location.component";
 
 @Component({
   selector: 'app-root',
