@@ -4,4 +4,5 @@
  <p class="listing-location">City: {{housingLocation.city}}</p>
   <p class="listing-location">Wifi: {{housingLocation.hasWifi ? 'Available': 'Not available' }}</p>
   <p class="listing-location">Laundry: {{housingLocation.hasLaundry ? 'Available': 'Not available' }}</p>
+  <a [routerLink]="[ '/details', housingLocation.id ]"> Know more </a>
 </section>

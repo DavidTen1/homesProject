@@ -1,0 +1,18 @@
+<article>
+<img class="listing-photo" [src]="housingLocation?.photo" alt="Photo of {{housingLocation?.name}}">
+<section class="listing-description">
+<h2 class="listing-heading">House name: {{housingLocation?.name}} </h2>
+  <p class="listing-heading">City name: {{housingLocation?.city}} </p>
+</section>
+
+  <section class="listing-features">
+    <h2 class="section-heading"> House info:</h2>
+<ol>
+  <li>Exemplars: {{housingLocation?.availableExemplars}}</li>
+  <li>Wifi: {{housingLocation?.hasWifi ? 'Available': 'Not available' }} </li>
+  <li>Laundry: {{housingLocation?.hasWifi ? 'Available': 'Not available' }} </li>
+</ol>
+  </section>
+
+
+</article>
