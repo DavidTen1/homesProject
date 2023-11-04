@@ -11,8 +11,6 @@ const routeConfig: Routes = [
   component: DetailsComponent,
   path:'details/:id'
   }
-
-
 ];
 
 export default  routeConfig;

@@ -39,6 +39,10 @@ export class HousesService {
     },
   ];
 
+  submitApplication(firstName: string, lastName: string, emailAddress: string){
+    console.log(`First name: ${firstName} last name: ${lastName} E-Mail address: ${emailAddress}` );
+  }
+
   getAllHousingLocations(): HousingLocation[] {
     return  this.housingLocationList;
   }
